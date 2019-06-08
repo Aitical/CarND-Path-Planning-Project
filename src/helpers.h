@@ -1,6 +1,6 @@
 #ifndef HELPERS_H
 #define HELPERS_H
-
+# define MAX_S 999999.0
 #include <math.h>
 #include <string>
 #include <vector>
@@ -22,6 +22,13 @@ string hasData(string s) {
     return s.substr(b1, b2 - b1 + 2);
   }
   return "";
+}
+
+// My functions using in main.cpp
+
+bool check_d(double d, int lane)
+{
+  return (d < (2 + 4 * lane + 2) && d > (2 + 4 * lane - 2));
 }
 
 //
